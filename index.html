@@ -5,19 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nashville Train Schedule</title>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Titan+One&display=swap" rel="stylesheet">
     <!--Bootstrap CDN-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--Custom CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid bg-dark text-white text-center mt-3">
+            <h1>Nashville Music City Star Train Schedule</h1>
+            <h2 class="text-center">All Aboard, Ya'll</h2>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+             Current Train Schedule
+            </div>
+            <div class="card-body">
+                <table class="table responsive">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col"> Train Name</th>
+                            <th scope="col"> Destination</th>
+                            <th scope="col"> Frequency (min)</th>
+                            <th scope="col"> Next Arrival</th>
+                            <th scope="col"> Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+          </div>
+        
+        <div class="card mt-4 mb-5">
+            <div class="card-header">
+             Add New Train
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form group">
+                        <label for="name">Train Name</label>
+                        <input type="name" class="form-control" id="train-name">
+                    </div>
+
+                    <div class="form group">
+                        <label for="destination">Destination</label>
+                        <input type="destination" class="form-control" id="train-destination">
+                    </div>
+
+                    <div class="form group">
+                        <label for="time">First Train Time (HH:mm-military time)</label>
+                        <input type="time" class="form-control" id="train-time">
+                    </div>
+
+                    <div class="form group">
+                        <label for="frequency">Frequency (min)</label>
+                        <input type="frequency" class="form-control" id="train-name">
+                    </div>
+
+                    <button id="train-submit" type="submit" class="btn btn-dark">Submit</button>
+                    
+                </form>
+            </div>
+    </div>
 
 
 
 <!--Funtionality Scripts-->
+<!-- Moment.js -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 <!--JQuery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!--Javascript-->
