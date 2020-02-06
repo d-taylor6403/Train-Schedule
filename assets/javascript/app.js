@@ -73,3 +73,4 @@ var firebaseConfig = {
       console.log("Error handled: " + errorObject.code);
   
   });
+
