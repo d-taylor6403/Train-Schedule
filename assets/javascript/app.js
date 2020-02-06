@@ -42,5 +42,34 @@ var firebaseConfig = {
       var timeTilTrain = trainFrequency - timeRemaining;
       console.log("Time Until Next Train: " + timeTilTrain);
 
+      var trainArrival = moment().add(timeTilTrain, "m").format("hh:mm a");
+      console.log("Train Arrival: " + trainArrival);
 
-  })
+      //Save New Train Information 
+      database.ref().push({
+          name: trainName,
+          destination: trainDestination,
+          frequency: trainFrequency,
+          minutesAway: timeTilTrain,
+          arrival: trainArrival
+      });
+
+      $("input").val(" ");
+
+  });
+
+  //-------------------------------------------
+  //On page load and after new submits, take snapshot of local data
+
+  database.ref().on("child_added", function (childSnapshot){
+      $("tbody").append("<tr>" + "<th scope='col'> " + childSnapshot.val().name +
+      "<td scope='col'>" + childSnapshot.val().destination +
+      "<td scope='col'>" + childSnapshot.val().frequency +
+      "<td scope='col'>" + childSnapshot.val().arrival +
+      "<td scope='col'>" + childSnapshot.val().minutesAway + "min");
+
+    // Errors should be logged to console
+  }, function (errorObject){
+      console.log("Error handled: " + errorObject.code);
+  
+  });
