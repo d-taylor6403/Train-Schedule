@@ -1,0 +1,27 @@
+body{
+    background-image: url(../images/Nashville.gif);
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.fa-train{
+    font-size: 70px;
+}
+
+h1{
+    font-family:'Sigmar One', cursive;
+    color: #FF432D;
+    font-size: 300%;
+}
+
+h2{
+    font-family:'Fredoka One', cursive;
+    color: #FF432D;
+    font-size: 200%;
+}
+
+.card-header{
+    font-family:'Fredoka One', cursive;
+    color: #FF432D;
+    background-color: #343a40 ;
+}
