@@ -1,5 +1,4 @@
-# GifTastic: The Immortal Edition
-
+# Firebase Train Schedule
 
 This is the sixth assignment for the Vanderbilt Coding Bootcamp.
 
